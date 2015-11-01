@@ -1,8 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         applicationId "com.gmail.markdevw.tryingrxjava"
@@ -25,5 +31,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'io.reactivex:rxjava:1.0.15'
     compile 'io.reactivex:rxandroid:1.0.1'
-    compile 'net.orfjackal.retrolambda:retrolambda:2.0.6'
 }
